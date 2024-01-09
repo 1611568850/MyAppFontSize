@@ -37,7 +37,7 @@ struct HomePage {
                                     })
                                 }
                             },
-                            changeFontSize:this.changeFontSize
+                            changeFontSize: this.changeFontSize
                         })
                     }
                 }, (item: SettingData) => JSON.stringify(item))
@@ -52,13 +52,16 @@ struct HomePage {
                 SettingItem({
                     setting: this.settingArr[CommonConstants.DISPLAY_INDEX],
                     itemClick: () => {
-                    }
+                    },
+                    changeFontSize: this.changeFontSize,
+
                 })
             }
             .blockBackground(StyleConstants.BLOCK_TOP_MARGIN_FIRST_PERCENT)
 
             Row() {
                 SettingItem({
+                    changeFontSize: this.changeFontSize,
                     setting: this.settingArr[CommonConstants.VOICE_INDEX],
                     itemClick: () => {
                     }
